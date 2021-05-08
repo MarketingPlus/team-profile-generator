@@ -114,6 +114,52 @@ const questions = {
         }
     ],
 
-
-
-}
+    Intern: [
+        {
+            type: "input",
+            name: "name",
+            message: "Enter the interns name:",
+            validate: (value) => {
+                if (value) {
+                    return true
+                } else { return "Please enter intern's name." }
+            },
+        },
+        {
+            type: "input",
+            name: "id",
+            message: "Enter the interns ID:",
+            validate: (value) => {
+                if (value) {
+                    return true
+                } else { return "Please enter intern's id." }
+            },
+        },
+        {
+            type: "input",
+            name: "email",
+            message: "Enter the interns e-mail address:",
+            validate: (value) => {
+                if (emailValidator.validate(value)) {
+                    return true
+                } else { return 'Please enter a valid email address.' }
+            },
+        },
+        {
+            type: "input",
+            name: "school",
+            message: "Enter the school the intern goes too:",
+            validate: (value) => {
+                if (value) {
+                    return true
+                } else { return "Please enter the name of school." }
+            },
+        },
+        {
+            type: "list",
+            name: "addNew",
+            message: "Would you like to add a new employee?",
+            choices: ["yes", "no"]
+        }
+    ]
+};
