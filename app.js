@@ -202,7 +202,52 @@ function addNewMember() {
                     addNewMember();
                 }
 
-            }
+            } else if (answer.UserType === "Engineer") {
+                inquirer.prompt(questions.Engineer)
+                    .then(answer => {
+                        //save ee info
+                        const engineer = new Engineer
+                            (
+                                answer.name,
+                                answer.id,
+                                answer.email,
+                                answer.github
+                            );
+                        //add info to team array
+                        team.push(engineer);
+                        if (answer.addNew === "yes") {
+                            addNewMember();
+                        } else {
+                            generate();
+                        };
+                    });
 
-        })
+            } else if (answer.UserType === "Intern") {
+                inquirer.prompt(questions.Intern)
+                    .then(answer => {
+                        //save ee info
+                        const intern = new Intern
+                            (
+                                answer.name,
+                                answer.id,
+                                answer.email,
+                                answer.school
+                            );
+                        //add info to team array
+                        team.push(intern);
+                        if (answer.addNew === "yes") {
+                            addNewMember();
+                        } else {
+                            generate();
+                        };
+                    });
+            };
+        });
+};
+
+addNewMember();
+
+function generate() {
+    fs.writeFileSync(outputPath, render(team), "utf-8");
+    process.exit(0);
 }
