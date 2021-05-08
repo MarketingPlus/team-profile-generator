@@ -163,3 +163,12 @@ const questions = {
         }
     ]
 };
+
+const selectUserType = [
+    {
+        type: "list",
+        name: "userType",
+        message: "Please choose the role for the employee",
+        choices: ["Manager", "Engineer", "Intern"],
+    }
+];
