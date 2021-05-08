@@ -8,3 +8,19 @@ const emailValidator = require('email-validator');
 
 const OUTPUT_DIR = path.resolve(__dirname, "final");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
+
+const render = require("./lib/Render");
+const Employee = require("./lib/Employee");
+
+let team = [];
+let managerAdd = true;
+
+const questions = {
+    Manager: [
+        
+    ]
+
+
+
+
+}
