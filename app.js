@@ -17,8 +17,53 @@ let managerAdd = true;
 
 const questions = {
     Manager: [
-        
-    ]
+        {
+            type: "input",
+            name: "name",
+            message: "Enter the managers name:",
+            validate: (value) => {
+                if (value) {
+                    return true
+                } else { return "Please enter manager's name." }
+            },
+        },
+        {
+            type: "input",
+            name: "id",
+            message: "Enter the managers ID:",
+            validate: (value) => {
+                if (value) {
+                    return true
+                } else { return "Please enter manager's id." }
+            },
+        },
+        {
+            type: "input",
+            name: "email",
+            message: "Enter the managers e-mail address:",
+            validate: (value) => {
+                if (emailValidator.validate(value)) {
+                    return true
+                } else { return 'Please enter a valid email address.' }
+            },
+        },
+        {
+            type: "input",
+            name: "officeNumber",
+            message: "Enter the managers office number:",
+            validate: (value) => {
+                if (value) {
+                    return true
+                } else { return "Please enter manager's office number." }
+            },
+        },
+        {
+            type: "list",
+            name: "addNew",
+            message: "Would you like to add a new employee?",
+            choices: ["yes", "no"]
+        }
+    ],
 
 
 
