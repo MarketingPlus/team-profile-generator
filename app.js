@@ -172,3 +172,37 @@ const selectUserType = [
         choices: ["Manager", "Engineer", "Intern"],
     }
 ];
+
+function addNewMember() {
+    inquirer.prompt(selectUserType)
+        .then(answer => {
+            if (answer.UserType === "Manager") {
+                if (managerAdd) {
+                    inquirer.prompt(questions.Manager)
+                        .then(answer => {
+                            const manager = new Manager
+                            (
+                                answer.name,
+                                answer.id,
+                                answer.email,
+                                answer.officeNumber
+                            );
+
+                            team.push(manager);
+                            managerAdd = false;
+                            if (answer.addNew === "yes") {
+                                addNewMember();
+                            } else {
+                                generate();
+                            }
+                        });
+                } else {
+
+                    console.log("You already have a manager!")
+                    addNewMember();
+                }
+
+            }
+
+        })
+}
