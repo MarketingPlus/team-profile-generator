@@ -205,7 +205,6 @@ function addNewMember() {
             } else if (answer.UserType === "Engineer") {
                 inquirer.prompt(questions.Engineer)
                     .then(answer => {
-                        //save ee info
                         const engineer = new Engineer
                             (
                                 answer.name,
@@ -213,7 +212,6 @@ function addNewMember() {
                                 answer.email,
                                 answer.github
                             );
-                        //add info to team array
                         team.push(engineer);
                         if (answer.addNew === "yes") {
                             addNewMember();
@@ -225,7 +223,6 @@ function addNewMember() {
             } else if (answer.UserType === "Intern") {
                 inquirer.prompt(questions.Intern)
                     .then(answer => {
-                        //save ee info
                         const intern = new Intern
                             (
                                 answer.name,
@@ -233,7 +230,6 @@ function addNewMember() {
                                 answer.email,
                                 answer.school
                             );
-                        //add info to team array
                         team.push(intern);
                         if (answer.addNew === "yes") {
                             addNewMember();
