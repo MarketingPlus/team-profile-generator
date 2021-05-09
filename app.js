@@ -99,7 +99,7 @@ const questions = {
         {
             type: "input",
             name: "github",
-            message: "Enter the engineers GitHub",
+            message: "Enter the engineers GitHub:",
             validate: (value) => {
                 if (value) {
                     return true
@@ -168,7 +168,7 @@ const selectMemberType = [
     {
         type: "list",
         name: "memberType",
-        message: "Please choose the role for the employee",
+        message: "Please choose the role for the employee:",
         choices: ["Manager", "Engineer", "Intern"],
     }
 ];
