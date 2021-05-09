@@ -82,6 +82,6 @@ If you have any question and concerns about this application or you would like t
 
 ## LICENSE ⚖️
 
-Copyright (c) Benjamin Wilson & [a](https://github.com/MarketingPlus). All rights reserved.
+Copyright (c) Benjamin Wilson & [MarketingPlus](https://github.com/MarketingPlus). All rights reserved.
 
 Licensed under the MIT license.
