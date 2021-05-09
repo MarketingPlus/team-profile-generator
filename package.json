@@ -1,32 +1,31 @@
 {
-    "name": "team-profile-generator",
-    "version": "1.0.0",
-    "description": "![License Badge](https://img.shields.io/github/license/MarketingPlus/team-profile-generator)",
-    "main": "app.js",
-    "directories": {
-      "lib": "lib",
-      "test": "test"
-    },
-    "scripts": {
-      "test": "jest --verbose test/*"
-    },
-    "repository": {
-      "type": "git",
-      "url": "git+http://github.com/MarketingPlus/team-profile-generator.git"
-    },
-    "author": "Benjamin Wilson",
-    "license": "ISC",
-    "dependencies": {
-      "email-validator": "^2.0.4",
-      "inquirer": "^6.3.1"
-    },
-   "devDependencies": {
-    "jest": "^24.8.0"
-    },
-    "keywords": [],
-    "bugs": {
-      "url": "https://github.com/MarketingPlus/team-profile-generator/issues"
-    },
-    "homepage": "https://github.com/MarketingPlus/team-profile-generator#readme"
-  }
-  
+  "name": "team-profile-generator",
+  "version": "3.0.0",
+  "description": "![License Badge](https://img.shields.io/github/license/MarketingPlus/team-profile-generator)",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest --verbose test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+http://github.com/MarketingPlus/team-profile-generator.git"
+  },
+  "author": "Benjamin Wilson",
+  "license": "ISC",
+  "dependencies": {
+    "email-validator": "^2.0.4",
+    "inquirer": "^6.3.1"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/MarketingPlus/team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/MarketingPlus/team-profile-generator#readme"
+}

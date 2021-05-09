@@ -13,7 +13,7 @@ const render = require("./lib/Render");
 const Employee = require("./lib/Employee");
 
 let team = [];
-let managerAdd = true;
+let canAddManager = true;
 
 const questions = {
     Manager: [
@@ -164,32 +164,36 @@ const questions = {
     ]
 };
 
-const selectUserType = [
+const selectMemberType = [
     {
         type: "list",
-        name: "userType",
+        name: "memberType",
         message: "Please choose the role for the employee",
         choices: ["Manager", "Engineer", "Intern"],
     }
 ];
 
 function addNewMember() {
-    inquirer.prompt(selectUserType)
+    inquirer.prompt(selectMemberType)
         .then(answer => {
-            if (answer.UserType === "Manager") {
-                if (managerAdd) {
+            // console.log(answer.memberType);
+
+            if (answer.memberType === "Manager") {
+                if (canAddManager) {
                     inquirer.prompt(questions.Manager)
                         .then(answer => {
+                            //save employee info
                             const manager = new Manager
-                            (
-                                answer.name,
-                                answer.id,
-                                answer.email,
-                                answer.officeNumber
-                            );
+                                (
+                                    answer.name,
+                                    answer.id,
+                                    answer.email,
+                                    answer.officeNumber
+                                );
 
+                            //add info to team array if manager doesn't exist
                             team.push(manager);
-                            managerAdd = false;
+                            canAddManager = false;
                             if (answer.addNew === "yes") {
                                 addNewMember();
                             } else {
@@ -197,14 +201,16 @@ function addNewMember() {
                             }
                         });
                 } else {
-
-                    console.log("You already have a manager!")
+                    //only 1 manager
+                    console.log("There is a manager already!")
                     addNewMember();
                 }
 
-            } else if (answer.UserType === "Engineer") {
+
+            } else if (answer.memberType === "Engineer") {
                 inquirer.prompt(questions.Engineer)
                     .then(answer => {
+                        //save ee info
                         const engineer = new Engineer
                             (
                                 answer.name,
@@ -212,6 +218,7 @@ function addNewMember() {
                                 answer.email,
                                 answer.github
                             );
+                        //add info to team array
                         team.push(engineer);
                         if (answer.addNew === "yes") {
                             addNewMember();
@@ -220,9 +227,10 @@ function addNewMember() {
                         };
                     });
 
-            } else if (answer.UserType === "Intern") {
+            } else if (answer.memberType === "Intern") {
                 inquirer.prompt(questions.Intern)
                     .then(answer => {
+                        //save ee info
                         const intern = new Intern
                             (
                                 answer.name,
@@ -230,6 +238,7 @@ function addNewMember() {
                                 answer.email,
                                 answer.school
                             );
+                        //add info to team array
                         team.push(intern);
                         if (answer.addNew === "yes") {
                             addNewMember();
