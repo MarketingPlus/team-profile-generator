@@ -70,7 +70,7 @@ A node.js application which generates a team profile page and dynamically change
 
 ## HOW TO INSTALL AND USE 👨‍💻
 
-[![WATCH THE VIDEO DEMONSTATION](https://user-images.githubusercontent.com/77607177/116783743-d008ef80-aad3-11eb-81b0-2518f97816e5.png)](https://drive.google.com/file/d/1kVVP21YvSCGCULocrGTWufXIKy6cSohr/view?usp=sharing)
+[![WATCH THE VIDEO DEMONSTATION](https://user-images.githubusercontent.com/77607177/116783743-d008ef80-aad3-11eb-81b0-2518f97816e5.png)](https://drive.google.com/file/d/1k-Ovn-GZc5Ie1IN8cpAMDHMm0bBqORdb/view?usp=sharing)
 
 <a name="questions"></a>
 
